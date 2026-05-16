@@ -18,7 +18,7 @@ export async function PUT(req: NextRequest, { params }: { params: Promise<{ id: 
     const allowed = ['title', 'description', 'status', 'priority', 'dueDate'];
     for (const key of allowed) {
       if (key in body) {
-        // eslint-disable-next-line @typescript-eslint/no-explicit-any
+         
         (task as any)[key] = body[key];
       }
     }
