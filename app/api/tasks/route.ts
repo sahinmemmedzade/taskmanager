@@ -14,7 +14,7 @@ export async function GET(req: NextRequest) {
     const priority = searchParams.get('priority');
     const search = searchParams.get('search');
 
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+     
     const query: any = { userId: user.userId };
     if (status && status !== 'all') query.status = status;
     if (priority && priority !== 'all') query.priority = priority;
