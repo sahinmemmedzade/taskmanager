@@ -1,36 +1,87 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-## Getting Started
+```markdown
+# TaskMaster - Full-Stack Task Management System
 
-First, run the development server:
+A robust, full-stack Task Management application built with **Next.js** and **Node.js**. This application allows users to manage their daily tasks efficiently with secure authentication and real-time data handling.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+## 🚀 Features
+
+### User Authentication
+- **Secure Signup & Login**: Users can create accounts and log in securely.
+- **JWT Authentication**: Secure session management using JSON Web Tokens.
+- **Password Hashing**: User passwords are encrypted using `bcrypt` before being stored in the database.
+
+### Task Management
+- **Personalized Dashboard**: Users can only see and manage their own tasks.
+- **Full CRUD Operations**: Users can **Create, Read, Update, and Delete** tasks.
+- **Status Management**: Toggle task status between `Pending` and `Completed`.
+- **Priority Levels**: Set importance for each task.
+
+### Advanced Filtering & Search
+- **Search System**: Find specific tasks using a real-time search bar.
+- **Filtering**: Filter tasks by `Status` (Pending/Completed) and `Priority`.
+
+### Technical Features
+- **RESTful API**: Communication between frontend and backend via Next.js API routes.
+- **Database**: Data persistence using **MongoDB**.
+- **Validation**: Robust server-side validation and error handling.
+- **Health Check**: Dedicated `/api/health` endpoint to monitor system status.
+- **App Versioning**: Current application version visible within the UI.
+- **Responsive Design**: Fully optimized for mobile, tablet, and desktop views.
+
+## 🛠️ Tech Stack
+
+- **Frontend**: Next.js (React), Tailwind CSS
+- **Backend**: Node.js, Next.js API Routes
+- **Database**: MongoDB (Mongoose)
+- **Security**: JWT (JSON Web Tokens), Bcrypt.js
+- **State Management**: React Hooks (useState, useEffect)
+
+## ⚙️ Installation & Setup
+
+1. **Clone the repository:**
+   ```bash
+   git clone [https://github.com/your-username/taskmaster.git](https://github.com/your-username/taskmaster.git)
+   cd taskmaster
+
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2. **Install dependencies:**
+```bash
+npm install
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
-## Learn More
+3. **Set up Environment Variables:**
+Create a `.env.local` file in the root directory and add:
+```env
+MONGODB_URI=your_mongodb_connection_string
+JWT_SECRET=your_secret_key
 
-To learn more about Next.js, take a look at the following resources:
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+4. **Run the development server:**
+```bash
+npm run dev
 
-## Deploy on Vercel
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Open [http://localhost:3000](https://www.google.com/search?q=http://localhost:3000) to see the result.
+
+## 📡 API Endpoints
+
+* `POST /api/auth/signup` - Register a new user
+* `POST /api/auth/login` - User login
+* `GET /api/tasks` - Fetch user-specific tasks
+* `POST /api/tasks` - Create a new task
+* `PUT /api/tasks/[id]` - Update an existing task
+* `DELETE /api/tasks/[id]` - Delete a task
+* `GET /api/health` - Check API status
+
+## 📝 License
+
+This project is licensed under the MIT License.
+
